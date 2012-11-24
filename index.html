@@ -1,39 +1,218 @@
 <html>
 	<head>
-		<title>Rabinovitch.ca</title>
-    <link href="css/styles.css" media="all" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<title>rabinovitch.ca</title>
+    <!--link href="css/styles.css" media="all" rel="stylesheet" type="text/css" /-->
+    <link href="css/bootstrap-spacelab.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="js/bootstrap-tab.js"></script>
     <script type="text/javascript">
       $(function() {
         if ($.browser.msie) {
           $('#msie_warn').show('slow');
         }
+
+        $('a[href="#header"]').on('click', function (e) {
+          e.preventDefault(); 
+          $('html, body').animate({scrollTop: $("#header").offset().top}, 800);
+        });
       });
     </script>
 	</head>
 	<body>
-    <div id="msie_warn" style="display:none;">
-      This site is optimized for another browser. Please try Mozilla Firefox, Google Chrome or Apple Safari.
-    </div>
-    <div id="header">
-      <h1>Rabinovitch<em>.ca</em></h1>
-    </div>
-    <div id="menu">
-      <ul>
-        <a href="index.html"><li class="active">Home</li></a>
-        <a href="services.html"><li>Services</li></a>
-        <a href="resume.html"><li>Resume</li></a>
-        <a href="contact.html"><li>Contact</li></a>
-      </ul>        
-    </div>
-    <div id="content">
-      <p>I've been developing web applications professionally since 2009 using primarily <a href="http://www.djangoproject.com/">Django</a> and <a href="http://python.org">Python</a> and I've found it to be a superior toolkit for developing applications quickly and securely. In addition to Django for the backend, I am very fluent with front end technologies HTML, CSS and <a href="http://jquery.com">JQuery</a>, and can implement your design in code with ease.</p>
-      <p>I am enthusiastic and energetic enough to jump into any project and reliably come out on top with a great product as a result. I look forward to constantly learning while I work in order to consistently produce the best application I can, and improve upon my own abilities while I'm at it. I take pleasure in producing very user-friendly software and I know that takes a solid foundational knowledge of server-side and front-end tools and their interactions.</p>
-      <p>I'm a native Vancouverite who loves the city and province for everything they have to offer, from snowboarding, to trail biking, to back-country camping far from civilization. I play Ultimate Frisbee year round on multiple teams and try to find any other excuse I can to enjoy the outdoors of British Columbia.</p>
-      <p>I'm <a href="services.html">available</a> on a consultancy basis as an experienced server-side developer and I look forward to working with you. You can check me out on <a href="http://ca.linkedin.com/pub/ben-rabinovitch/22/878/563">LinkedIn</a> as well.</p>
-    </div>
-    <div id="footer">
-      &copy; Rabinovitch.ca 2010
-    </div>
-	</body>
-</html>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span8 offset2">
+          <div class="jumbotron">
+            <h1 id="header">rabinovitch<span class="muted">.ca</span></h1>
+            <p class="lead offset1">
+              good software for a better web.
+            </p>
+          </div>
+
+          <div id="main-content">
+
+            <div class="alert alert-block" id="msie_warn">
+              <h4 class="alert-heading">Using an outdated browser is unsafe!</h4>
+              <p>
+                Please take a moment to improve your web browsing experience and make the web a better place! Check out <a href="http://browsehappy.com">Browse Happy</a> for more information.
+              </p>
+            </div>
+
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#brief" data-toggle="pill">brief</a></li>
+              <li><a href="#resume" data-toggle="pill">resum&eacute;</a></li>
+              <li><a href="#contact" data-toggle="pill">contact</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="brief">
+                <p>
+                  I'm a software developer who's passionate about building easy to use and domain appropriate tools on the web. I also spend some time playing <a href="http://www.vul.bc.ca">ultimate frisbee</a>, snowboarding the <a href="http://en.wikipedia.org/wiki/North_Shore_Mountains">local mountains</a> and hiking through the forest with my dog.
+                </p>
+                <p>
+                  You can check me out online over at <a href="https://github.com/brab">Github</a> and <a href="http://ca.linkedin.com/pub/ben-rabinovitch/22/878/563">LinkedIn</a>.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="resume">
+                <div id="photo"><img class="img-polaroid img-rounded pull-right" src="images/BenRabinovitch.jpg" /></div> 
+                <h2>education</h2> 
+                <ul> 
+                  <li>Bachelor of Computing Sciences</li> 
+                  <ul> 
+                    <li>Simon Fraser University</li> 
+                    <li><a href="http://www.cs.sfu.ca">www.cs.sfu.ca</a></li> 
+                    <li>Concentration in Information Systems</li> 
+                  </ul> 
+                </ul> 
+                <h2>skills</h2> 
+                <ul> 
+                  <li>Proficient with various linux workstation and server distributions such as Ubuntu Linux Desktop and Server, Red Hat/Fedora/CentOS as well as Mac OS and Microsoft Windows</li> 
+                  <li>Programming skills in many languages and evironments with the eagerness and skill to learn additional languages, techniques and frameworks very quickly</li> 
+                  <ul> 
+                    <li>Python</li> 
+                    <li>Javascript</li> 
+                    <li>HTML, CSS</li> 
+                    <li>JSON and BSON</li> 
+                  </ul> 
+                  <li>Various Web Technologies</li> 
+                  <ul> 
+                    <li>Django</li> 
+                    <li>Flask</li>
+                    <li>JQuery</li>
+                    <li>Angular</li>
+                    <li>Apache</li> 
+                    <li>NginX</li> 
+                    <li>Memcache</li> 
+                    <li>Asynchronous Design (AJAX)</li>
+                    <li>REST Interfaces</li>
+                    <li>Bootstrap</li>
+                  </ul> 
+                  <li>Various Web Hosting Solutions</li>
+                  <ul>
+                    <li>Heroku</li>
+                    <li>Amazon Web Services</li>
+                    <ul>
+                      <li>EC2</li>
+                      <li>S3</li>
+                      <li>SES</li>
+                      <li>etc.</li>
+                    </ul>
+                    <li>Virtual Private Servers</li>
+                  </ul>
+                  <li>Version Control</li> 
+                  <ul> 
+                    <li>Git</li> 
+                    <li>Subversion</li> 
+                  </ul> 
+                  <li>Databases</li> 
+                  <ul> 
+                    <li>PostgreSQL</li> 
+                    <li>MySQL</li> 
+                    <li>SQL Alchemy</li> 
+                    <li>MongoDB</li> 
+                  </ul> 
+                  <li>Development Environments</li> 
+                  <ul> 
+                    <li>I'm most comfortable developing in OSX or Ubuntu with Vim</li> 
+                    <li>I have some experience with IDEs such as Eclipse and Netbeans</li> 
+                  </ul> 
+                  <li>Proficient with Adobe Photoshop, Illustrator, Acrobat and many other Adobe products</li> 
+                </ul> 
+                <a href="#header">top</a> 
+                <h2>relevant experience</h2> 
+                <ul> 
+                  <li>Responsive Web Developer, Eventsage</li>
+                  <ul>
+                    <li>2012 to present</li>
+                    <li><a href="http://www.eventsage.com">www.eventsage.com</a></li>
+                    <li>Agile, feature focused development</li>
+                    <li>Highly responsive and asynchronous design paradigm</li>
+                    <li>Our two-developer team is charged with designing and developing a brand new concept from the ground up. We are employing rapid prototyping principles to iterate on features very quickly and push small modules live a quickly as they are ready</li>
+                    <li>We are striving for total testing coverage using established testing frameworks and continuous integration tools to reliably ensure as much up-time as possible</li>
+                  </ul>
+                  <li>Software Design Engineer, Tristorm Product Design Inc.</li>
+                  <ul>
+                    <li>2010 to 2012</li>
+                    <li><a href="http://www.tiipz.com">www.tiipz.com</a></li>
+                    <li>Rapid, lightweight development focussed on multiple releases weekly from a four-person team. The project is built on the Django web-framework and is heavily reliant on current web technologies like CSS3 and Javascript.</li>
+                    <li>Responsible for start to finish design and implementation of many features, enhacements and user-experience related aspects of the project.</li>
+                    <li>Primary focus on server side development with Django in addition to implementing the site's extensive analytics and statistics features as designed by our Market Research Analyst</li>
+                    <li>Primary Developer on three major products:
+                      <ul>
+                        <li>A mobile market research and engagement platform for Microsoft Windows Phone two-day launch events in five major US cities
+                          <ul>
+                            <li><a href="http://www.tiipz.com/c/winphone8/1">www.tiipz.com/c/winphone</a></li>
+                          </ul>
+                        </li>
+                        <li>A mobile market research and engagement platform for the Calgary Flames featured prominently at three early season games
+                          <ul>
+                            <li><a href="http://www.tiipz.com/c/flames/qr">www.tiipz.com/c/flames</a></li>
+                          </ul>
+                        </li>
+                        <li>A powerful desktop web browser site used to brand and otherwise customize mobile market research experiences on Tiipz' new mobile platform for various clients like The Telus World Ski and Snowboard Festival in April 2012 and Best-Buy's QR code campaign found in Best-Buy flyers accross Canada in April 2012
+                          <ul>
+                            <li><a href="http://www.tiipz.com/dash/">www.tiipz.com/dash/</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <li>Owner and Web Software Engineer, Rabinovitch.ca</li>
+                  <ul>
+                    <li>2010 to present</li>
+                    <li><a href="http://rabinovitch.ca">rabinovitch.ca</a></li>
+                    <li>Contract web software engineering based out of Burnaby, BC.</li>
+                    <li>Portfolio:</li>
+                    <ul>
+                      <li><a href="http://www.zuzee.com">www.zuzee.com</a></li>
+                      <li><a href="http://www.tiipz.com">www.tiipz.com</a></li>
+                    </ul>
+                  </ul>
+                  <li>Software Design Engineer, RG Properties</li> 
+                  <ul> 
+                    <li>2009 to 2010</li> 
+                    <li><a href="http://www.officepools.com">www.officepools.com</a></li> 
+                    <li><a href="http://www.officepoolsgames.com">www.officepoolsgames.com</a></li> 
+                    <li>Fast-paced web development in a three-person team. Software constructed using the Django framework with Python, JQuery, AJAX, HTML and CSS. The application backend runs on Apache, NGinx, Memcached and PostgreSQL. Source control managed with Git.</li> 
+                    <li>Developed <a href="http://www.officepoolsgames.com">www.officepoolsgames.com</a> from the ground up on a two-person team with the guidance of our team-lead. Site went live once we had completed a stable and working application and received continual updates, features and fixes from our team.</li> 
+                    <li>Feature additions, support and maintenance of <a href="http://www.officepools.com">www.officepools.com</a> as well as other corporate sites.</li>
+                  </ul> 
+                  <a href="#header">top</a> 
+                  <h2>interests</h2> 
+                  <ul> 
+                    <li>Team player on multiple Ultimate Frisbee teams year-round</li> 
+                    <li>Mountain and Trail Biking</li> 
+                    <li>Snowboarding</li> 
+                    <li>Back-Country Camping</li> 
+                  </ul> 
+                  <h2>contact info</h2> 
+                  <p>The easiest way to reach me is by <a href="mailto:Ben Rabinovitch &lt;ben@rabinovitch.ca&gt;">email</a>. I look forward to speaking with you.</p> 
+                  <a href="#header">top</a>
+                </div>
+
+                <div class="tab-pane fade" id="contact">
+                  <p>
+                    You found me! If you'd like to get a hold of me, please feel free to send me an email any time: <a href="mailto:ben@rabinovitch.ca">ben[at]rabinovitch.ca</a>.
+                  </p>
+                </div>
+              </div>
+
+              <hr />
+
+              <div id="footer">
+                &copy; 2012 rabinovitch.ca
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="msie_warn" style="display:none;">
+        This site is optimized for another browser. Please try Mozilla Firefox, Google Chrome or Apple Safari.
+      </div>
+    </body>
+  </html>
