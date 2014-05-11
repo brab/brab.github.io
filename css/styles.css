@@ -1,0 +1,15 @@
+h1, h2, h3 {
+  font-family: "Droid Serif"
+}
+
+ul.nav-simple li{
+  border-left: 2px #fff solid;
+}
+
+ul.nav-simple li.active{
+  border-left: 2px #428bca solid;
+}
+
+a i {
+  color: #000;
+}
